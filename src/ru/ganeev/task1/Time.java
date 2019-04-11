@@ -6,6 +6,6 @@ public class Time {
     }
 
     public static void main(String[] args) {
-        System.out.println(convertToHour(3600)+ " час.");
+        System.out.println(convertToHour(7200)+ " часа.");
     }
 }
