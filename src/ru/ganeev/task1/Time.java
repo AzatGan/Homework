@@ -1,11 +1,12 @@
 package ru.ganeev.task1;
 
-public class Time {
-    public static int convertToHour(int sec){
-        return sec / 3600;
-    }
+import java.util.Scanner;
 
+public class Time {
     public static void main(String[] args) {
-        System.out.println(convertToHour(3600)+ " час.");
+        Scanner n = new Scanner(System.in);
+        System.out.println("Введите секунды:");
+        float c = n.nextInt();
+        System.out.println("Конвертация завершена: " + (c / 3600) + " ч.");
     }
 }

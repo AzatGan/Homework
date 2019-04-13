@@ -1,10 +1,12 @@
 package ru.ganeev.task1;
 
+import java.util.Scanner;
+
 public class PayDay {
     public static void main(String[] args) {
-        int a = 70000;
-        int b = (a / 100)*13;
-        int c = a - b;
-        System.out.println(c);
+        Scanner n = new Scanner (System.in);
+        System.out.println("Введите данные:");
+        int a = n.nextInt();
+        System.out.println("Сумма на руки: " + (a - a / 100 * 13));
     }
 }
