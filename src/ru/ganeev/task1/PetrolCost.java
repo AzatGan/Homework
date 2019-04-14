@@ -9,6 +9,5 @@ public class PetrolCost {
         System.out.println("Введите объём в литрах.");
         int volume = x.nextInt();
         System.out.println("К оплате " + lPet * volume + " руб.");
-        System.out.println("Спасибо за покупку! Ждём вас снова!");
     }
 }
