@@ -5,17 +5,16 @@ import java.util.Scanner;
 public class GameHotCold {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+        int randomNum = (int) (Math.random()*10);
         System.out.println("Введите число");
-        int n = s.nextInt();
-        do{
-            //for (;;);
-            if (n>=25&&n<=49)
-            System.out.println("Горячо");
-            n = s.nextInt();
-            if (n<=24&&n>0)
+        while (s.hasNextInt()){
+            int n = s.nextInt();
+            if (n > randomNum)
+                System.out.println("Горячо");
+            else
                 System.out.println("Холодно");
-            n = s.nextInt();
-        }while (n!=50);
-        System.out.println("Вы выйграли");
+            if (n == randomNum)
+                System.out.println("Вы отгадали!");
+        }
     }
 }
