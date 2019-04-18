@@ -5,20 +5,19 @@ import java.util.Scanner;
 public class NumDetec {
     public static void main(String[] args) {
         Scanner x = new Scanner(System.in);
-
         while (x.hasNextInt()){
             int n = x.nextInt();
-            boolean pos = n>0;
-            boolean neg = n%2<=0;
+            boolean pos = n > 0;
+            boolean neg = (n % 2 == 0);
 
-            if (pos)
-            System.out.print("Положительное ");
+            if(pos)
+                System.out.print("Положительное ");
             else
-            System.out.print("Отрицательное ");
+                System.out.print("Отрицтельное ");
             if(neg)
-            System.out.println("четное число.");
+                System.out.println("четное число.");
             else
-            System.out.println("нечетное число.");
+                System.out.println("нечетное число.");
         }
     }
 }
