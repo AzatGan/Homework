@@ -15,6 +15,7 @@ public class GameHotCold {
                 System.out.println("Холодно");
             if (n == randomNum)
                 System.out.println("Вы отгадали!");
+            System.out.println();
         }
     }
 }

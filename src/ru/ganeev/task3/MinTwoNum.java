@@ -13,5 +13,6 @@ public class MinTwoNum {
             System.out.println("Минимальное число: " + a);
         else
             System.out.println("Минимальное число: " + b);
+
     }
 }
