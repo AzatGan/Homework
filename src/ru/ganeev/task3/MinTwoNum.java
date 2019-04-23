@@ -9,10 +9,12 @@ public class MinTwoNum {
         int a,b;
         a = s.nextInt();
         b = s.nextInt();
-        if(a < b)
+        if (a==b) {
+            System.out.println("Числа равные " + a);
+        }
+        else if (a <b) {
             System.out.println("Минимальное число: " + a);
-        else
+        } else
             System.out.println("Минимальное число: " + b);
-
     }
 }
