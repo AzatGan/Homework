@@ -5,6 +5,7 @@ public class Time {
         return sec/3600;
     }
     public static void main(String[] args) {
+
         System.out.println(convertSecTHour(3600) + " час.");
     }
 }
