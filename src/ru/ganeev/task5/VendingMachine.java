@@ -1,15 +1,39 @@
 package ru.ganeev.task5;
 
+
+
 public class VendingMachine {
-    private String drinks[];
-
-
-    public VendingMachine(String[] drinks) {
-        this.drinks = drinks;
-
+    private Drink[] drinks;
+    private int money = 0;
+    public VendingMachine(Drink[]drinks) {
+        this.drinks = drinks; // присвоили в поле класса значение из аргумента конструктора
     }
-    public static  String ShowMenu( String Menu ){
-        return Menu;
+    public void showmenu(){
+       // выводим id, название, цену каждого напитка с количество больше 0
+        for (int id = 0; id < drinks.length; id++) {
+           if (drinks[id].getCount()>0){
+               System.out.printf("%d. %s. цена: %d. ",id, drinks[id].getName(), drinks[id].getPriсe());
+               System.out.println();
+           }
+        }
+    }
+    public void inputMoney(int money) {
+        this.money = this.money + money;
+    }
+    public boolean tryToBuy(int id) {
+        Drink selectedDrink;
+        selectedDrink = drinks[id];
+        System.out.printf("Вы внесли %d рублей. напиток '%s' стоит %d рублей", money, selectedDrink.getName(), selectedDrink.getPriсe());
+        System.out.println();
 
+        if (money >= selectedDrink.getPriсe()) {
+            int change = selectedDrink.buy(money);
+            System.out.printf("Вы купили напиток %s получите сдачу %d", selectedDrink.getName(), change);
+            System.out.println();
+            return true;
+        } else {
+            System.out.println("не достаточно средств, внесите ещё");
+            return false;
+        }
     }
 }
