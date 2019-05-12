@@ -7,7 +7,9 @@ public class Program{
         VendingMachine VM = new VendingMachine(new Drink[]{new Drink("Cola", 50, 10),
                 new Drink("Tea", 15, 10),
                 new Drink("Water", 5, 10)});
+
         Scanner sc = new Scanner(System.in);
+        System.out.println("Внесите деньги и выберите напиток.");
 
         while (true) {
             VM.showmenu();
