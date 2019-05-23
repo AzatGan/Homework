@@ -1,9 +1,10 @@
 package ru.ganeev.task6.Task3;
 
 public  class Contract {
-    private int number = 12;
-    private String date = "23.05.19";
-    private String[] listOfGoods = {"apple", "lemon", "pineapple"};
+    private int number;
+    private String date;
+    private String[] listOfGoods;
+
 
     public int getNumber() {
         return number;

@@ -1,10 +1,8 @@
 package ru.ganeev.task9;
 
 public class EducatedPerson {
-    private Food food;
-
-    public EducatedPerson(Food food) {
-        this.food = food;
-
+    public static void eat(Food food) throws Exception{
+        if (food==Food.MASH)throw new Exception("Thanks MOM.");
+        System.out.println("Thanks very tasty");
     }
 }

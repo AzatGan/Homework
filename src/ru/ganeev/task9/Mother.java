@@ -8,10 +8,10 @@ import java.io.InputStreamReader;
 public class Mother {
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String h =br.readLine();
-
+        Mother mother = new Mother();
             try {
-                Food.valueOf("CARROT");
+                String h =br.readLine();
+                Food food = Food.valueOf(h);
             }
             catch (Exception e) {
                 e.printStackTrace();
