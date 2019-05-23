@@ -8,16 +8,15 @@ import java.io.InputStreamReader;
 public class Mother {
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String h =br.readLine();
 
             try {
-                String h =br.readLine();
-                Food.valueOf("APPLE");
-                System.out.println("Thanks very tasty!");
+                Food.valueOf("CARROT");
             }
             catch (Exception e) {
-                // Food.valueOf("CARROT");
-                System.out.println("Thanks MOM.");
                 e.printStackTrace();
+                System.out.println("Thanks MOM.");
             }
+
     }
 }
