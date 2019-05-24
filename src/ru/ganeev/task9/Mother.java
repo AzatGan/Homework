@@ -8,15 +8,21 @@ import java.io.InputStreamReader;
 public class Mother {
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        Mother mother = new Mother();
+        EducatedPerson child = new EducatedPerson();
+        while (true) {
+            String h = "";
             try {
-                String h =br.readLine();
-                Food food = Food.valueOf(h);
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("Thanks MOM.");
-            }
 
+                h = br.readLine();
+                h = h.toUpperCase();
+                Food food = Food.valueOf(h);
+                child.eat(food);
+
+            }catch (IllegalArgumentException i ) {
+                System.out.println("it's not food [" + h +"]");
+            }catch (Exception e){
+                System.out.println("Thanks mom.");
+            }
+        }
     }
 }
