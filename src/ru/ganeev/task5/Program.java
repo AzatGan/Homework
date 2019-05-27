@@ -26,6 +26,7 @@ public class Program{
                VM.showmenu();
                System.out.println("Выберите напиток.");
 
+               logger.log(Level.INFO,"Выбор напитков");
                logger.log(Level.INFO,"Понимает только три цифры 0, 1, 2!");
 
                try {
