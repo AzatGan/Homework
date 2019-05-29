@@ -10,25 +10,25 @@ public class FileDem {
     public static void main(String[] args) {
         File fileorig = new File("filetest.txt");
         try{
-            System.out.println(fileorig.createNewFile());
+            System.out.println("Создан файл" + " "+ fileorig.createNewFile());
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
 
-        File fileorig1 = new File("..\\task10\\filetest/txt");
+        File fileorig1 = new File("..\\task10\\filetest.txt");
         System.out.println(fileorig1.getAbsolutePath());
 
         File dir1 = new File("..\\Homework\\dir1");
-        System.out.println(dir1.mkdir());
+        System.out.println("Создана директория " + " " + dir1.mkdir());
 
        // Files.createFile();
-        Path source = Paths.get("C:\\Users\\AZAT\\IdeaProjects\\Homework\\..\\task10\\filetest\\txt");
-        Path destination = Paths.get("C:\\Users\\AZAT\\IdeaProjects\\Homework\\dir1");
+        Path source = Paths.get("..\\task10\\filetest.txt");
+        Path destination = Paths.get("..\\dir1\\filetest.txt");
         try{
             Files.copy(source, destination);
             System.out.println("file copied");
         }catch (IOException i){
-            System.out.println(i.getMessage());
+            System.out.println("Копирование не удалось");
         }
 
 
