@@ -24,16 +24,16 @@ public class Recursion {
     }
     private  static void recursionMet(File dir){
         File[] files = dir.listFiles();
-
+        if (files!=null)
         for (File file: files){
             if (!file.isDirectory()){
                 file.getAbsolutePath();
-                System.out.println("файл <" + file + "> обнаружен");
+                System.out.println("файл <" + file.getAbsolutePath() + "> обнаружен");
             }else {
                 recursionMet(file);
             }
         }
         dir.getAbsolutePath();
-        System.out.println("директория <" + dir + "> обнаружена");
+        System.out.println("директория <" + dir.getAbsolutePath() + "> обнаружена");
     }
 }
